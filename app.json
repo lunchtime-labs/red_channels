@@ -1,0 +1,8 @@
+{
+  "name": "redchannels",
+  "description": "Red Channels Blacklist Proxy Server",
+  "image": "heroku/go:1.6",
+  "mount_dir": "src/github.com/lunchtime-labs/redchannels",
+  "website": "http://github.com/lunchtime-labs/redchannels",
+  "repository": "http://github.com/lunchtime-labs/redchannels"
+}
