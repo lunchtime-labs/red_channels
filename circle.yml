@@ -6,10 +6,8 @@ dependencies:
   pre:
     - go get github.com/tools/godep
   override:
-    - mkdir -p $HOME/.go_workspace/src/github.com/$CIRCLE_PROJECT_USERNAME/
-    - cd $HOME/.go_workspace/src/github.com/$CIRCLE_PROJECT_USERNAME && mv $HOME/$CIRCLE_PROJECT_REPONAME ./
-    #- mkdir -p "$GOPATH/src/$IMPORT_PATH"
-    #- rsync -azC --delete ./ "$GOPATH/src/$IMPORT_PATH/"
+    - mkdir -p "$GOPATH/src/$IMPORT_PATH"
+    - rsync -azC --delete ./ "$GOPATH/src/$IMPORT_PATH/"
 
 test:
   pre:
