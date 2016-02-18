@@ -2,7 +2,7 @@
 	"ImportPath": "github.com/lunchtime-labs/redchannels",
 	"GoVersion": "go1.6",
 	"Packages": [
-		"./src/..."
+		"./cmd/..."
 	],
 	"Deps": [
 		{
