@@ -1,7 +1,7 @@
 machine:
   environment:
     IMPORT_PATH: "github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME"
-    GO15VENDOREXPERIMENT: false
+    GO15VENDOREXPERIMENT: true
 
 dependencies:
   pre:
@@ -9,7 +9,6 @@ dependencies:
   override:
     - mkdir -p "$GOPATH/src/$IMPORT_PATH"
     - rsync -azC --delete ./ "$GOPATH/src/$IMPORT_PATH/"
-    - godep restore
 
 test:
   pre:
