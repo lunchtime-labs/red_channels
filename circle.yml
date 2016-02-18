@@ -5,7 +5,6 @@ machine:
 dependencies:
   pre:
     - go get github.com/tools/godep
-
   override:
     - mkdir -p "$GOPATH/src/$IMPORT_PATH"
     - rsync -azC --delete ./ "$GOPATH/src/$IMPORT_PATH/"
@@ -13,6 +12,11 @@ dependencies:
 test:
   pre:
     - go vet ./...
-
   override:
     - godep go test ./...
+
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: redchannels-staging
