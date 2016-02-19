@@ -7,7 +7,7 @@ Red Channels
 
 > Red Channels: The Report of Communist Influence in Radio and Television was an anti-Communist tract published in the United States at the start of the Red Scare. Issued by the right-wing journal Counterattack on June 22, 1950, the pamphlet-style book names 151 actors, writers, musicians, broadcast journalists, and others in the context of purported Communist manipulation of the entertainment industry. Some of the 151 were already being denied employment because of their political beliefs, history, or association with suspected subversives. Red Channels effectively placed the rest on the industry blacklist.
 
-Red Channels is a blacklist proxy server written in [Go](http://golang.org/) with much help from [Martini](https://github.com/go-martini/martini).
+Red Channels is a blacklist proxy server written in [Go](http://golang.org/) with much help from [Gin](https://github.com/gin-gonic/gin).
 
 ## Getting Started
 
