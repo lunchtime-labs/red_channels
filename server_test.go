@@ -19,7 +19,7 @@ var _ = Describe("Redchannels", func() {
 		Expect(page.Destroy()).To(Succeed())
 	})
 
-  Describe("basic server", func() {
+  Describe("server", func() {
     It("should respond successfully to root requests", func() {
       By("fetching the root url", func() {
         Expect(page.Navigate("http://localhost:5000")).To(Succeed())
