@@ -15,7 +15,7 @@ test:
   pre:
     - go vet ./cmd/...
   override:
-    - godep go test --ginkgo.randomizeAllSpecs --ginkgo.failOnPending --ginkgo.progress --trace --race
+    - ginkgo -r --randomizeAllSpecs --randomizeSuites --failOnPending --cover --trace --race --progress
 
 deployment:
   staging:
