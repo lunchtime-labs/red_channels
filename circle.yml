@@ -11,7 +11,7 @@ dependencies:
     - rsync -azC --delete ./ "$GOPATH/src/$IMPORT_PATH/"
     - godep restore
   post:
-    - go get -U github.com/onsi/ginkgo/ginkgo
+    - go get github.com/onsi/ginkgo/ginkgo
 
 test:
   pre:
