@@ -33,10 +33,12 @@ func (s *BlacklistService) Run(config Config) error {
 
   // routes
   router.GET("/", enumerateHeaders)
-  // loader.io verification
-  router.GET("loaderio-" + config.LoaderIoToken + "/", func(c *gin.Context) {
-    c.String(http.StatusOK, "loaderio-" + config.LoaderIoToken)
-  })
+  if config.LoaderIoToken != "" {
+    // loader.io verification
+    router.GET("loaderio-" + config.LoaderIoToken + "/", func(c *gin.Context) {
+      c.String(http.StatusOK, "loaderio-" + config.LoaderIoToken)
+    })
+  }
   router.Run(":" + strconv.Itoa(config.Port))
 
   return nil
