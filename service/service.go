@@ -6,7 +6,6 @@ import (
   "net/http"
   "github.com/lunchtime-labs/redchannels/blacklist"
   "github.com/gin-gonic/gin"
-"go/doc/testdata"
 )
 
 type Config struct {
