@@ -6,6 +6,7 @@ import (
   "net/http"
   "github.com/lunchtime-labs/redchannels/blacklist"
   "github.com/gin-gonic/gin"
+"go/doc/testdata"
 )
 
 type Config struct {
@@ -34,8 +35,8 @@ func (s *BlacklistService) Run(config Config) error {
   // routes
   router.GET("/", enumerateHeaders)
   // loader.io verification
-  router.GET(config.LoaderIoApiKey, func(c *gin.Context) {
-    c.String(http.StatusOK, config.LoaderIoApiKey)
+  router.GET("loaderio-" + config.LoaderIoApiKey, func(c *gin.Context) {
+    c.String(http.StatusOK, "loaderio-" + config.LoaderIoApiKey)
   })
   router.Run(":" + strconv.Itoa(config.Port))
 
