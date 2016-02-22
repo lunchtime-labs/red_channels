@@ -1,16 +1,15 @@
-package redchannels_test
+package service_test
 
 import (
+	"testing"
+	"github.com/sclevine/agouti"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/sclevine/agouti"
-
-	"testing"
 )
 
 func TestRedchannels(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "Redchannels Suite")
+	RunSpecs(t, "Redchannels Service Test Suite")
 }
 
 var agoutiDriver *agouti.WebDriver

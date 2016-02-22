@@ -2,9 +2,16 @@
 	"ImportPath": "github.com/lunchtime-labs/redchannels",
 	"GoVersion": "go1.6",
 	"Packages": [
-		"./cmd/..."
+		"./cmd/...",
+		"./service/...",
+		"./blacklist/..."
 	],
 	"Deps": [
+		{
+			"ImportPath": "github.com/codegangsta/cli",
+			"Comment": "1.2.0-217-g5db7419",
+			"Rev": "5db74198dee1cfe60cf06a611d03a420361baad6"
+		},
 		{
 			"ImportPath": "github.com/gin-gonic/gin",
 			"Comment": "v1.0rc1-110-g4cc2de6",
