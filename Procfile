@@ -1,1 +1,1 @@
-web: redchannels server 2>&1
+web: redchannels server
