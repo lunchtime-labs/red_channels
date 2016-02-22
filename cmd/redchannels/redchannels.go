@@ -33,10 +33,10 @@ func main() {
       EnvVar: "BLACKLIST_PATH",
     },
     cli.StringFlag{
-      Name: "loaderio-api-key",
+      Name: "loaderio-verify-token",
       Value: "",
-      Usage: "Loader.io API Key",
-      EnvVar: "LOADERIO_API_KEY",
+      Usage: "Loader.io verification token",
+      EnvVar: "LOADERIO_VERIFY_TOKEN",
     },
 	}
 
@@ -49,7 +49,7 @@ func main() {
           Port: c.GlobalInt("port"),
           Env: c.GlobalString("env"),
           Blacklist: c.GlobalString("blacklist"),
-          LoaderIoApiKey: c.GlobalString("loaderio-api-key"),
+          LoaderIoToken: c.GlobalString("loaderio-verify-token"),
         }
 
 				service := service.BlacklistService{}

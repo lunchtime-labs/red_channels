@@ -9,10 +9,10 @@ import (
 )
 
 type Config struct {
-  Env            string
-  Port           int
-  LoaderIoApiKey string
-  Blacklist      string
+  Env           string
+  Port          int
+  LoaderIoToken string
+  Blacklist     string
 }
 
 type BlacklistService struct {
@@ -34,8 +34,8 @@ func (s *BlacklistService) Run(config Config) error {
   // routes
   router.GET("/", enumerateHeaders)
   // loader.io verification
-  router.GET("loaderio-" + config.LoaderIoApiKey, func(c *gin.Context) {
-    c.String(http.StatusOK, "loaderio-" + config.LoaderIoApiKey)
+  router.GET("loaderio-" + config.LoaderIoToken, func(c *gin.Context) {
+    c.String(http.StatusOK, "loaderio-" + config.LoaderIoToken)
   })
   router.Run(":" + strconv.Itoa(config.Port))
 
