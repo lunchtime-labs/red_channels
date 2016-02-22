@@ -1,22 +1,23 @@
 machine:
   environment:
     IMPORT_PATH: "github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME"
-    GO15VENDOREXPERIMENT: true
+    GO15VENDOREXPERIMENT: 1
 
 dependencies:
   pre:
     - go get github.com/tools/godep
-    - go get github.com/onsi/ginkgo
   override:
     - mkdir -p "$GOPATH/src/$IMPORT_PATH"
     - rsync -azC --delete ./ "$GOPATH/src/$IMPORT_PATH/"
     - godep restore
+  post:
+    - go get -U github.com/onsi/ginkgo/ginkgo
 
 test:
   pre:
     - go vet ./cmd/...
   override:
-    - ginkgo -r -randomizeSuites -randomizeAllSpecs -failOnPending -progress -trace -race
+    - ginkgo -r --randomizeAllSpecs --randomizeSuites --cover --trace --race --progress
 
 deployment:
   staging:
