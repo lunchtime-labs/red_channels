@@ -27,7 +27,7 @@ func (blacklist Blacklist) Swap(i, j int) {
 }
 
 
-func PopulateBlacklist(path string) (Blacklist, error) {
+func New(path string) (Blacklist, error) {
   file, err := os.Open(path)
   if err != nil {
     return nil, err

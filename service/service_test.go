@@ -19,8 +19,8 @@ var _ = Describe("Redchannels", func() {
 		Expect(page.Destroy()).To(Succeed())
 	})
 
-  Describe("server", func() {
-    It("should respond successfully to root requests", func() {
+  Describe("Blacklist Service", func() {
+    It("should respond successfully to requests", func() {
       By("fetching the root url", func() {
         Expect(page.Navigate("http://localhost:5000")).To(Succeed())
       })
