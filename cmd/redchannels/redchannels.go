@@ -3,7 +3,7 @@ package main
 import (
   "os"
   "log"
-  "github.com/codegangsta/cli"
+  "github.com/lunchtime-labs/redchannels/Godeps/_workspace/src/github.com/codegangsta/cli"
   "github.com/lunchtime-labs/redchannels/service"
 )
 

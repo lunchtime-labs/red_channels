@@ -5,7 +5,7 @@ import (
   "strconv"
   "net/http"
   "github.com/lunchtime-labs/redchannels/blacklist"
-  "github.com/gin-gonic/gin"
+  "github.com/lunchtime-labs/redchannels/Godeps/_workspace/src/github.com/gin-gonic/gin"
 )
 
 type Config struct {

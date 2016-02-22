@@ -2,9 +2,9 @@ package service_test
 
 import (
 	"testing"
-	"github.com/sclevine/agouti"
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/gomega"
+	"github.com/lunchtime-labs/redchannels/Godeps/_workspace/src/github.com/sclevine/agouti"
+	. "github.com/lunchtime-labs/redchannels/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	. "github.com/lunchtime-labs/redchannels/Godeps/_workspace/src/github.com/onsi/gomega"
 )
 
 func TestRedchannels(t *testing.T) {
