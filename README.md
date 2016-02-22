@@ -1,7 +1,7 @@
 Red Channels
 ---
 
-[![Circle CI](https://circleci.com/gh/lunchtime-labs/redchannels.svg?style=shield&circle-token=f4a71c31976d9606177bc5ae893ed0dad6a54043)](https://circleci.com/gh/lunchtime-labs/redchannels)
+[![Build Status](https://travis-ci.org/lunchtime-labs/redchannels.svg?branch=master)](https://travis-ci.org/lunchtime-labs/redchannels)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/8/84/RedChannelsCover.jpg)
 

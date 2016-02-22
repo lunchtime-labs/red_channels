@@ -11,3 +11,9 @@ install:
   - go get github.com/onsi/ginkgo/ginkgo
 script:
   - ginkgo -r --randomizeAllSpecs --randomizeSuites --cover --trace --race --progress
+deploy:
+  provider: heroku
+  api_key:
+    secure: Pys9GGU6btpfejaqDwiO7ijv8d+6/9nW7npwWJed/zMXylLD/BlGEjtl0Ye4Ms/np/GLzsZuw52PIC44xnAjSlD0qGNzIK1FFHMVKgzypH5J0sNa18VdiqzP35asDTHT8xoi9sqlm2J9E+UPiej5WWigrZ1bhFXFmRLc7N0J8B0HFyvvlbKflvxxne9hEwb5p4Oa4hPaCNn4nqkKX0riR2e3UgLXsg9VJnQOTlNn6/hPo1uz92mBMUfrf0bltXeyiIR/SM5N0JAoB/xxK6FKVPpnClvWUJT9tA8L8d+3bcede72PoONyo01EK0W9ARwqdhdl1bVch9t7z5KCu4WDK5UKnLV3ZU8DxUMXauVv5fAMT3fSaoxsdnAD7ot2xM+Muaoyfa7yCfIwNRJ13WY1xMJsuP9akNEIshXogMtvOGbPdIcjJGQkPjCEwNVoULxzA2Y/b8oJFi1O3zEQydg5jhMfx2kE6MDYwObvJ85yBd3+WU/0i5Jy7V+IsfMiTHCgnzcROMnbtpsmJJFtjB9I+GVu38sqCAEXnJUSnCTgt4548prLGW3DEZ/QiQaT5h6zIm48BKqM5QZheZeAvPkN8nrhVWe3ZUAzF77vlx7K6ke7Tyu4Qf4gwaXtaggtyBG0JCrYj3yqhbkrnI4dDtTKCWMf1cpjOVix4ASeRVMdBJg=
+  app:
+    master: redchannels-staging
