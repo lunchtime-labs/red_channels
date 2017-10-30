@@ -6,8 +6,9 @@ env:
   - GO15VENDOREXPERIMENT=1
 install:
   # Add Godeps dependencies to GOPATH and PATH
-  - export GOPATH="${TRAVIS_BUILD_DIR}/vendor:$GOPATH"
-  - export PATH="${TRAVIS_BUILD_DIR}/bin:$PATH"
+  - export GOPATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace:$GOPATH"
+  - export PATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace/bin:$PATH"
+  - go get -u github.com/onsi/ginkgo/ginkgo
 before_script:
   - go vet ./...
 script:
